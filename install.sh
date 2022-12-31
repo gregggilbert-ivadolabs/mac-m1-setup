@@ -7,7 +7,7 @@ brew install git
 brew install miniforge
 
 # app with UI, see https://formulae.brew.sh/cask/
-brew install --cask google-chrome
+brew install --cask brave-browser
 
 brew install --cask visual-studio-code
 brew install --cask pycharm
