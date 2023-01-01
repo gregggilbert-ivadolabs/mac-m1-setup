@@ -2,7 +2,11 @@
 xcode-select --install
 softwareupdate --install-rosetta
 
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/gregggilbert/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/gregggilbert/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 brew install git
 brew install miniforge
 
@@ -21,8 +25,9 @@ brew install --cask slack
 
 brew install --cask spotify
 
-# terminal
+# terminal and required fonts
 brew install --cask iterm2
+brew install --cask fontforge
 brew install --cask font-fira-code
 brew install starship
 echo "eval "$(starship init zsh)"" >>! ~/.zshrc
